@@ -1,3 +1,7 @@
+/* 
+Given two strings needle and haystack, return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
+*/
+
 function strStr (haystack, needle) {
     var j = 0;
     var index = -1;
@@ -21,3 +25,7 @@ function strStr (haystack, needle) {
 
     return -1;
 }
+
+/* 
+The time complexity of this algorithm is O(n^2) (sadly), it's space complexity is O(n) with constant auxiliar space
+*/

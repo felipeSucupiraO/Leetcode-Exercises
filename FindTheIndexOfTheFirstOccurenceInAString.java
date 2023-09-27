@@ -1,3 +1,7 @@
+/* 
+Given two strings needle and haystack, return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
+*/
+
 public class FindTheIndexOfTheFirstOccurenceInAString {
     static public int strStr(String haystack, String needle) {
         int j = 0;
@@ -26,3 +30,7 @@ public class FindTheIndexOfTheFirstOccurenceInAString {
         return -1;
     }
 }
+
+/* 
+The time complexity of this algorithm is O(n^2) (sadly), it's space complexity is O(n) with constant auxiliar space
+ */

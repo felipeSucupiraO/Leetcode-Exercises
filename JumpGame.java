@@ -1,3 +1,9 @@
+/* 
+You are given an integer array nums. You are initially positioned at the array's first index, and each element in the array represents your maximum jump length at that position.
+
+Return true if you can reach the last index, or false otherwise.
+ */
+
 public class JumpGame {
     static public boolean canJump (int[] nums) {
         int currDistance = 1;
@@ -19,3 +25,7 @@ public class JumpGame {
         }
     }
 }
+
+/* 
+Funny because I thought of a situation that this solution could not solve, and yet it solved. Anyway, it have a time complexity of O(n) and a space complexity of O(n), with constant auxiliar space.
+*/

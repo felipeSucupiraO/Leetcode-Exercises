@@ -1,3 +1,9 @@
+/* 
+A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.
+
+Given a string s, return true if it is a palindrome, or false otherwise.
+*/
+
 function validPalindrome (s) {
     let phrase = s.toLowerCase().replace(/[^a-z0-9]/gi, '');
 
@@ -15,3 +21,7 @@ function validPalindrome (s) {
 
     return true;
 }
+
+/* 
+Accordingly to some articles I read, this algorithm should have an O(logn) time complexity, once it is a two pointers algorithm, but I may be wrong.
+*/

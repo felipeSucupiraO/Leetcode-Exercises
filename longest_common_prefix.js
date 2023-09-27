@@ -1,3 +1,9 @@
+/* 
+Write a function to find the longest common prefix string amongst an array of strings.
+
+If there is no common prefix, return an empty string "".
+*/
+
 function longestCommonPrefix (strs) {
     var longestPrefix = "";
     var biggestString = 1;
@@ -27,3 +33,7 @@ function longestCommonPrefix (strs) {
         longestPrefix += currentLetter;
     }
 }
+
+/* 
+Literally one of the worst algorithms I have ever done. I don't know what I'm doing. My mind is a pudim right now.
+*/

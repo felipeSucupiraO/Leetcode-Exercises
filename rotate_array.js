@@ -1,3 +1,7 @@
+/* 
+Given an integer array nums, rotate the array to the right by k steps, where k is non-negative.
+*/
+
 function rotate(nums, k) {
     var j = 0;
     // the j value keeps track of the index of the element that is being exchanged
