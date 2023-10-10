@@ -3,43 +3,18 @@
 //You have to rotate the image in -place, which means you have to modify the input 2D matrix directly.DO NOT allocate another 2D matrix and do the rotation.
 
 function rotateMatrix(matrix) {
-    let n = matrix.length
-    let element;
+    var n = matrix.length;
+    var temp;
 
-    var result = createMatrix(n, n);
-
-    for (let i = 0; i < n; i++) {
-        var clm = (n - i - 1);
-        for (let j = 0; j < n; j++) {
-            element = matrix[i][j];
-            result[j][clm] = element;            
+    for (var i = 0; i < Math.floor(n / 2); i++) {
+        for (var j = i; j < n - 1 - i; j++) {
+            temp = matrix[i][j];
+            matrix[i][j] = matrix[n - 1 - j][i];
+            matrix[n - 1 - j][i] = matrix[n - 1 - i][n - 1 - j];
+            matrix[n - 1 - i][n - 1 - j] = matrix[j][n - 1 - i];
+            matrix[j][n - 1 - i] = temp;
         }
-    }
-
-    matrix = result;
-    return matrix;
-};
-
-function createMatrix(lns, clms) {
-    var matrix = [];
-    var sub = [];
-    
-    for (let j = 0; j < clms; j++) {
-        sub.push(0);
-    }
-
-    for (let i = 0; i < lns; i++) {
-        matrix[i] = sub;
     }
 
     return matrix;
-}
-
-function printMatrix(matrix) {
-    for (let i = 0; i <= matrix.length; i++) {
-        for (let j = 0; i<= matrix.length; j++) {
-            console.log(matrix[i][j] + " ");
-        }
-        console.log("\n");
-    }
-}
+};
