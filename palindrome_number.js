@@ -7,8 +7,19 @@ function isPalindrome(x) {
         return false;
 
     var size = Math.floor(Math.log10(x) + 1);
-    var i = 0;
-    while (true) {
-        if (x )
+    var num = x;
+    var digit;
+    var invert = 0;
+
+    for (var i = 0; i < size; i++) {
+        digit = Math.floor(num / Math.pow(10, size - i - 1));
+
+        invert += digit * Math.pow(10, i);
+        num -= digit * Math.pow(10, size - i - 1);
     }
+
+    if (invert == x)
+        return true;
+    else
+        return false;
 }
